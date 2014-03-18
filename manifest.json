@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Block Webpages",
+  "description": "This extension block web pages during a period to improve the productivity.",
+  "version": "1.0",
+  "options_page": "options.html",
+  "author": "Antonio S. (asanchez@plutec.net)",
+  "icons": { "128": "icon_128.png" },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
